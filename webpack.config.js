@@ -23,7 +23,12 @@ module.exports = env => {
       env.deploy === "development" && new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         title: "",
-        chartIDs: [],
+        chartIDs: [
+          'viz__jobs-by-wage-and-gender',
+          'viz__common-occupation-female',
+          'viz__common-occupation-male',
+          'viz__common-occupation-all'
+        ],
         inject: false,
         template: path.resolve(__dirname, "src/index.html")
       }),
